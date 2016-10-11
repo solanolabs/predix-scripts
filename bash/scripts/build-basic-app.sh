@@ -164,7 +164,7 @@ __find_and_replace "-->" "" "secure.html" "$buildBasicAppLogDir"
 cd ..
 
 # Push the application
-if [[ $USE_BACKUP_UAA -eq 1 ]]; then
+if [[ $USE_TRAINING_UAA -eq 1 ]]; then
   sed -i -e 's/uaa_service_label : predix-uaa/uaa_service_label : predix-uaa-training/' manifest.yml
 fi
 
