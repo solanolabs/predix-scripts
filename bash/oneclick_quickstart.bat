@@ -2,7 +2,7 @@
 SETLOCAL ENABLEEXTENSIONS ENABLEDELAYEDEXPANSION
 SET BRANCH=master
 SET SHELL_SCRIPT_NAME=oneclick_quickstart
-SET SHELL_SCRIPT=https://raw.githubusercontent.com/PredixDev/predix-scripts/!BRANCH!/%SHELL_SCRIPT_NAME%.sh
+SET SHELL_SCRIPT=https://raw.githubusercontent.com/PredixDev/predix-scripts/!BRANCH!/bash/%SHELL_SCRIPT_NAME%.sh
 SET RESETVARS=https://raw.githubusercontent.com/PredixDev/local-setup/!BRANCH!/resetvars.vbs
 SET SETUP_WINDOWS=https://raw.githubusercontent.com/PredixDev/local-setup/!BRANCH!/setup-windows.bat
 GOTO START
