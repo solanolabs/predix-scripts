@@ -44,7 +44,7 @@ function __getUaaAdminToken
 		echo ""
   else
     UAA_ADMIN_BASE64=$(echo -ne admin:$UAA_ADMIN_SECRET | base64)
-    responseCurl=`curl -X GET "$1/oauth/token?grant_type=client_credentials" -H "Authorization: Basic $UAA_ADMIN_BASE64" -H "Content-Type: application/x-www-form-urlencoded"`
+    responseCurl=`curl -s -X GET "$1/oauth/token?grant_type=client_credentials" -H "Authorization: Basic $UAA_ADMIN_BASE64" -H "Content-Type: application/x-www-form-urlencoded"`
 
     tokenType=$( __jsonval "$responseCurl" "token_type" )
     accessToken=$( __jsonval "$responseCurl" "access_token" )
